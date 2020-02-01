@@ -1,0 +1,47 @@
+body,html{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+body{
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item{
+  min-width: 10px;
+  position: relative;
+  transition: 1s;
+  background-color: #333;
+  border-radius: 16px;
+  transition: box-shadow 1s transform 1s border 1s;
+  webkit-transform-origin: 50%  51%;
+  /* box-shadow: -25px -25px 70px rgb(64, 64, 64,0.3) ,25px 25px 70px rgb(0, 0, 0,0.3) ; */
+}
+
+.item::before{
+  content: attr(content);
+  color: #333;
+  font-weight: bold;
+  font-size: 200px;
+  text-shadow: -5px -5px 7px rgb(64, 64, 64,0.3) ,5px 5px 7px rgb(0, 0, 0,0.3) ;
+}
+.insert{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background:transparent;
+  border:unset;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 200px;
+  color: transparent;
+  caret-color: white;
+}
+.insert:focus{
+  outline-style: none;
+}
